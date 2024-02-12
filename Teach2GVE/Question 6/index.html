@@ -1,0 +1,37 @@
+
+<!-- Write a program that counts the number of vowels in a sentence.
+eg " Hello World " => returns 2 -->
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <input type="text" id="sentenceInput" />
+    <button onclick="countVowels()">Count Vowels</button>
+    <p id="result"></p>
+
+    <script>
+      function countVowels() {
+        const sentence = document.getElementById("sentenceInput").value.toLowerCase();
+        const vowels = ['a', 'e', 'i', 'o', 'u'];// This line defines an array of vowels.
+        let uniqueVowels = [];//This line initializes an empty array called uniqueVowels that will be used to store the unique vowels found in the sentence.
+
+        for (let i = 0; i < sentence.length; i++) {//This line starts a loop that will iterate over each character in the sentence string.
+
+          if (vowels.includes(sentence[i]) && !uniqueVowels.includes(sentence[i])) {
+           //This line checks if the current character is a vowel (using the includes method) and if it has not already been added to the uniqueVowels array.
+               uniqueVowels.push(sentence[i]); }                           //This line adds the current character to the uniqueVowels array if it is a unique vowel.
+        }
+        
+        const count = uniqueVowels.length;//This line gets the length of the uniqueVowels array and assigns it to the count variable
+        document.getElementById("result").innerHTML = `Number of Unique Vowels: ${count}`;//This line sets the innerHTML property of the paragraph element with an ID of "result" to display the number of unique vowels found in the sentence.
+      }
+    </script>
+
+  </body>
+</html>

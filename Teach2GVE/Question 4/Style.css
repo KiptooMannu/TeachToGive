@@ -1,0 +1,20 @@
+body{
+  background-color: #98d3f0;
+}
+.input{
+  text-align: center;
+  margin-top: 100px;
+  width: auto;
+  height: auto;
+  box-sizing: border-box;
+ 
+}
+#outputResult{
+  background-color: #aeefde;
+}
+#inputText{
+  background-color: hsl(187, 9%, 61%);
+}
+button{
+  color: hwb(336 62% 9%);
+}
